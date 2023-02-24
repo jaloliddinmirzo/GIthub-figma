@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+*:focus {
+    outline: 1px dashed #000;
+    outline-offset: 1px;
+    outline: none;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: initial;
+}
+
+body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    background-color: transparent;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 15px;
+}
+
+img {
+    display: flex;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
