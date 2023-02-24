@@ -26,6 +26,16 @@ a {
     color: inherit;
 }
 
+:root {
+    --main-color: #4B6A9B;
+    --button-color: #0079FF;
+    --body-color: #697C9A;
+    --title-color: #2B3442;
+    --background-color: #F6F8FF;
+    --footer-color: #FEFEFE;
+    --b-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+}
+
 button {
     border: none;
     outline: none;
@@ -44,15 +54,16 @@ input {
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
-    color: #4B6A9B;
+    color: var(--main-color);
 }
+
 input::placeholder {
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
-    color: #4B6A9B;
+    color: var(--main-color);
 }
 
 img {
@@ -65,18 +76,26 @@ ul {
 
 body {
     display: flex;
-    font-family: ;
     flex-direction: column;
     justify-content: center;
     font-family: 'Space Mono';
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
-    color: #4B6A9B;
-    background-color: #F6F8FF;
-    ;
+    color: var(--main-color);
+    background-color: var(--background-color);
+
 }
 
+.bcg {
+    --main-color: #fff;
+    --body-color: #fff;
+    --background-color: #141D2F;
+    --title-color: #FFFFFF;
+    --background-color: #141D2F;
+    --footer-color: #1E2A47;
+    --b-shadow: none;
+}
 
 /* HEADER  */
 
@@ -106,7 +125,7 @@ body {
     font-weight: 700;
     font-size: 26px;
     line-height: 39px;
-    color: #222731;
+    color: var(--title-color);
 }
 
 .dark {
@@ -114,16 +133,17 @@ body {
     font-size: 13px;
     line-height: 19px;
     letter-spacing: 2.5px;
-    color: #697C9A;
+    color: var(--body-color);
 }
+
 .wrap {
     width: min(100%, 730px);
     margin: 0 auto;
     /* display: flex; */
     justify-content: space-between;
     margin-bottom: 24px;
-    background: #FEFEFE;
-    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    background: var(--footer-color);
+    box-shadow: var(--b-shadow) ;
     border-radius: 15px;
     padding: 10px;
 }
@@ -136,11 +156,10 @@ body {
 main .wrap2 {
     width: min(100%, 730px);
     margin: 0 auto;
-    /* display: flex; */
     justify-content: space-between;
     margin-bottom: 24px;
-    background: #FEFEFE;
-    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    background: var(--footer-color);
+    box-shadow: var(--b-shadow) ;
     border-radius: 15px;
     padding: 10px;
 }
@@ -166,6 +185,7 @@ main .wrap2 {
     background: #0079FF;
     border-radius: 10px;
 }
+
 .button:hover {
     background: #60ABFF;
 }
@@ -199,7 +219,7 @@ main .wrap2 {
 .intro__text1 {
     font-size: 16px;
     line-height: 24px;
-    color: #0079FF;
+    color: var(--button-color);
     margin-bottom: 20px;
 }
 
@@ -214,7 +234,7 @@ main .wrap2 {
     font-size: 15px;
     line-height: 22px;
     text-align: right;
-    color: #697C9A;
+    color: var(--body-color);
     margin-bottom: 70px;
 }
 
@@ -247,7 +267,7 @@ main .wrap2 {
 
 .box__list1 {
     display: flex;
-    background: #F6F8FF;
+    background: var(--background-color);
     border-radius: 10px;
     padding: 16px 83px 16px 32px;
     margin-bottom: 37px;
@@ -265,20 +285,22 @@ main .wrap2 {
     font-weight: 700;
     font-size: 22px;
     line-height: 33px;
-    color: #2B3442;
+    color: var(--title-color);
 }
-.box__button{
+
+.box__button {
     display: flex;
     gap: 60px;
 
 }
 
-.item0{
+.item0 {
     display: flex;
     gap: 18px;
 
 }
-.box__item2{
+
+.box__item2 {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -289,7 +311,16 @@ main .wrap2 {
 
 /* MAIN END */
 
+.mode {
+    width: 20px;
+    height: 20px;
+    background-image: url('../imgs/svg/moon.svg');
+}
 
+.mode1 {
+    background-image: url('../imgs/svg/sun.svg');
+
+}
 
 
 
@@ -301,8 +332,24 @@ main .wrap2 {
         padding-left: 0px;
     }
 }
+
 @media (min-width: 376px) and (max-width: 576px) {
     .wrap__footer {
         padding-left: 0px;
+    }
+    .button{
+        padding: 12px 16px;
+    }
+    .intro__title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    input {
+        font-size: 13px;
+        line-height: 25px;
+    }
+    input::placeholder {
+        font-size: 13px;
+        line-height: 25px;
     }
 }
