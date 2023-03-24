@@ -1,8 +1,28 @@
 const mode = document.querySelector('.mode')
+const lightBtn = document.querySelector('.light-btn')
 const body = document.querySelector('body')
 
-mode.addEventListener('click' , ()=>{
-    mode.classList.toggle('mode1')
-    body.classList.toggle('bcg')
+const local = localStorage.getItem("mode")
 
+if (local) {
+    body.classList.add('bcg')
+    mode.classList.toggle('hidden')
+    lightBtn.classList.toggle('hidden')
+}
+
+const Dark = () => {
+    mode.classList.toggle('hidden')
+    lightBtn.classList.toggle('hidden')
+    body.classList.toggle('bcg')
+}
+
+mode.addEventListener('click', () => {
+    Dark()
+    localStorage.setItem("mode","dark")
+})
+
+
+lightBtn.addEventListener('click', () => {
+    Dark()
+    localStorage.setItem("mode","")
 })
