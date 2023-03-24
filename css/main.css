@@ -326,6 +326,10 @@ main .wrap2 {
     display: none;
 }
 
+#avatar{
+    border-radius: 50%;
+}
+
 
 
 
