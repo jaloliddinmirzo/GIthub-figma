@@ -35,6 +35,7 @@ export function click(el) {
     } else if (el == form) {
         el.addEventListener("submit", (e) => {
             e.preventDefault()
+            el.reset()
             let user = input.value.trim()
 
             async function getData() {
