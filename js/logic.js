@@ -92,8 +92,8 @@ const creat = (el) => {
     if (el) {
         let a = el.split("T");
         let b = a[0].split("-")
+        return `Joined ${b[2]} ${time(b[1].substr(1))} ${b[0]}`
     }
-    return `Joined ${b[2]} ${time(b[1].substr(1))} ${b[0]}`
 }
 // Creat github end
 
