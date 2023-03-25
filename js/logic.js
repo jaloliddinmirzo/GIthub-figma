@@ -47,19 +47,19 @@ export function click(el) {
                 following.textContent = Data.following ? Data.following : 0
                 name.textContent = Data.name ? Data.name : "User not available"
                 blog.textContent = Data.blog ? Data.blog : "Blog not available"
-                login.textContent =  Data.login ? "@" + Data.login : "Login not available"
+                login.textContent = Data.login ? "@" + Data.login : "Login not available"
                 login.setAttribute("href", `${Data.html_url}`)
                 company.textContent = Data.company ? Data.company : "Not Available"
                 twitter_username.textContent = Data.twitter_username ? Data.twitter_username : "Not Available"
                 blog.setAttribute("href", Data.blog)
                 location.textContent = Data.location ? Data.location : "Not Available"
-                created_at.textContent = creat(Data.created_at) 
+                created_at.textContent = creat(Data.created_at)
                 public_repos.textContent = Data.public_repos ? Data.public_repos : 0
 
             }
             if (user) {
                 getData()
-             user.value = ''
+                input.value = ''
             }
 
         })
@@ -91,7 +91,7 @@ function time(mon) {
 const creat = (el) => {
     let a = el.split("T");
     let b = a[0].split("-")
-    return  `Joined ${b[2]} ${time(b[1].substr(1))} ${b[0]}` 
+    return `Joined ${b[2]} ${time(b[1].substr(1))} ${b[0]}`
 }
 // Creat github end
 
