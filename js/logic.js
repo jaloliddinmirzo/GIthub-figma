@@ -45,9 +45,9 @@ export function click(el) {
                 bioText.textContent = Data.bio ? Data.bio : "Not Available"
                 followers.textContent = Data.followers ? Data.followers : 0
                 following.textContent = Data.following ? Data.following : 0
-                name.textContent = Data.name ? Data.name : "This user does not exist"
-                blog.textContent = Data.blog ? Data.blog : "This blog does not exist"
-                login.textContent =  Data.login ? "@" + Data.login : "This login does not exist"
+                name.textContent = Data.name ? Data.name : "User not available"
+                blog.textContent = Data.blog ? Data.blog : "Blog not available"
+                login.textContent =  Data.login ? "@" + Data.login : "Login not available"
                 login.setAttribute("href", `${Data.html_url}`)
                 company.textContent = Data.company ? Data.company : "Not Available"
                 twitter_username.textContent = Data.twitter_username ? Data.twitter_username : "Not Available"
